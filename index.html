@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>٥٠ موقعًا ستتجول فيها لساعات 🌍</title>
+<meta name="description" content="دليل تفاعلي لـ٥٠ موقعًا مذهلًا: خرائط حية، فضاء، بيانات، كتب، فن، موسيقى وتجارب ممتعة.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b16;--bg2:#0d1426;--card:rgba(255,255,255,.045);--card-b:rgba(255,255,255,.09);
+  --text:#eef2ff;--muted:#9aa6c4;--accent:#5eead4;--accent2:#818cf8;--accent3:#f472b6;
+  --shadow:0 10px 40px rgba(0,0,0,.45);--radius:18px;
+}
+[data-theme="light"]{
+  --bg:#f5f7fb;--bg2:#e9eef8;--card:#ffffff;--card-b:#dfe5f1;--text:#111827;--muted:#5b6478;
+  --accent:#0d9488;--accent2:#4f46e5;--accent3:#db2777;--shadow:0 10px 30px rgba(30,41,59,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal","Segoe UI","Noto Sans Arabic","Geeza Pro",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--accent2) 28%,transparent),transparent 60%),
+             radial-gradient(700px 450px at 0% 20%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 60%),
+             radial-gradient(600px 400px at 50% 110%,color-mix(in srgb,var(--accent3) 14%,transparent),transparent 60%)}
+.stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(1px 1px at 20% 30%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 70% 80%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 40% 60%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 90% 15%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 10% 85%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 55% 10%,#fff 50%,transparent 51%);
+  background-size:380px 380px;animation:drift 120s linear infinite}
+[data-theme="light"] .stars{display:none}
+@keyframes drift{to{background-position:380px 760px}}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:800;font-size:1.05rem;display:flex;gap:8px;align-items:center}
+.iconbtn{background:var(--card);border:1px solid var(--card-b);color:var(--text);width:44px;height:44px;border-radius:12px;font-size:1.2rem;cursor:pointer;transition:transform .2s}
+.iconbtn:hover{transform:rotate(-12deg) scale(1.06)}
+.hero{text-align:center;padding:40px 0 26px}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--card-b);color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.8rem);font-weight:800;line-height:1.25;
+  background:linear-gradient(100deg,var(--accent),var(--accent2) 50%,var(--accent3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .globe{display:inline-block;-webkit-text-fill-color:initial;color:initial;animation:spin 6s ease-in-out infinite}
+@keyframes spin{0%,100%{transform:rotate(0)}50%{transform:rotate(-15deg) scale(1.1)}}
+.hero p{color:var(--muted);font-size:clamp(1rem,2.2vw,1.2rem);max-width:640px;margin:14px auto 0}
+.controls{position:sticky;top:0;z-index:10;padding:14px 0;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 75%,transparent);border-bottom:1px solid var(--card-b)}
+.row{display:flex;gap:12px;align-items:center}
+.search{flex:1;position:relative}
+.search input{width:100%;font:inherit;font-size:1.05rem;padding:13px 46px 13px 16px;border-radius:14px;border:1px solid var(--card-b);background:var(--card);color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent)}
+.search span{position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.7}
+.random{font:inherit;font-weight:700;font-size:1rem;padding:13px 20px;border:0;border-radius:14px;cursor:pointer;white-space:nowrap;color:#0b1020;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));box-shadow:0 6px 24px color-mix(in srgb,var(--accent2) 40%,transparent);transition:transform .2s,box-shadow .2s}
+.random:hover{transform:translateY(-2px) scale(1.03)}
+.random:active{transform:scale(.97)}
+.random.roll .dice{display:inline-block;animation:roll .6s ease}
+@keyframes roll{to{transform:rotate(720deg)}}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{font:inherit;font-size:.95rem;white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--card-b);background:var(--card);color:var(--text);cursor:pointer;transition:all .2s}
+.chip .cnt{font-size:.78rem;opacity:.65;margin-inline-start:4px}
+.chip:hover{border-color:var(--accent)}
+.chip.active{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#0b1020;border-color:transparent;font-weight:700}
+.status{color:var(--muted);font-size:.95rem;margin:18px 0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;padding-bottom:40px}
+.card{position:relative;display:flex;gap:14px;align-items:center;padding:18px;border-radius:var(--radius);text-decoration:none;color:var(--text);
+  background:var(--card);border:1px solid var(--card-b);overflow:hidden;isolation:isolate;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;animation:pop .5s both;animation-delay:calc(var(--i)*18ms)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s;
+  background:radial-gradient(400px 160px at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 18%,transparent),transparent 70%)}
+.card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 60%,transparent);box-shadow:var(--shadow)}
+.card:hover::before{opacity:1}
+.card:focus-visible,.chip:focus-visible,.random:focus-visible,.iconbtn:focus-visible,.search input:focus-visible{outline:3px solid var(--accent3);outline-offset:3px}
+.card.hidden{display:none}
+.card.flash{animation:flash 1.2s ease}
+@keyframes flash{0%,100%{box-shadow:none}30%{box-shadow:0 0 0 4px var(--accent3),var(--shadow);transform:scale(1.04)}}
+.num{position:absolute;top:10px;left:14px;font-size:.8rem;font-weight:700;color:var(--muted);opacity:.7}
+.icon{flex:none;width:54px;height:54px;border-radius:15px;display:grid;place-items:center;position:relative;
+  background:linear-gradient(140deg,color-mix(in srgb,var(--accent) 22%,transparent),color-mix(in srgb,var(--accent2) 22%,transparent));border:1px solid var(--card-b);transition:transform .3s}
+.icon img{width:30px;height:30px;border-radius:6px;position:relative;z-index:1;background:#fff;padding:2px}
+.icon .emo{font-size:1.65rem;position:absolute}
+.icon img + .emo{font-size:1rem;bottom:-6px;left:-6px;background:var(--bg2);border-radius:50%;width:24px;height:24px;display:grid;place-items:center;border:1px solid var(--card-b);z-index:2}
+.card:hover .icon{transform:rotate(-8deg) scale(1.08)}
+.body{display:flex;flex-direction:column;min-width:0;flex:1}
+.title{font-weight:700;font-size:1.05rem;line-height:1.4}
+.name{color:var(--muted);font-size:.9rem}
+.domain{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;color:var(--accent);opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right}
+.go{font-size:1.2rem;color:var(--muted);transition:transform .3s,color .3s}
+.card:hover .go{transform:translate(-4px,-4px);color:var(--accent)}
+.empty{text-align:center;color:var(--muted);padding:60px 0;display:none;font-size:1.1rem}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:24px 0 40px;border-top:1px solid var(--card-b)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,120px);background:var(--bg2);color:var(--text);border:1px solid var(--card-b);padding:12px 20px;border-radius:14px;box-shadow:var(--shadow);transition:transform .35s;z-index:50;max-width:90vw}
+.toast.show{transform:translate(-50%,0)}
+@media (max-width:640px){
+  .row{flex-wrap:wrap}.search{flex-basis:100%}.random{flex:1}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .hero{padding:22px 0 18px}.card{padding:15px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">🧭 <span>مستكشف الإنترنت</span></div>
+    <button class="iconbtn" id="theme" aria-label="تبديل الوضع الفاتح والداكن" title="تبديل الوضع">🌙</button>
+  </header>
+  <section class="hero">
+    <span class="badge">دليل تفاعلي · اضغط على أي بطاقة لفتح الموقع</span>
+    <h1>٥٠ موقعًا ستتجول فيها لساعات <span class="globe">🌍</span></h1>
+    <p>خرائط حية، فضاء، بيانات، كتب، فن، موسيقى وتجارب ممتعة — افتح أيًا منها وانسَ الوقت.</p>
+  </section>
+</div>
+<div class="controls">
+  <div class="wrap">
+    <div class="row">
+      <label class="search"><span aria-hidden="true">🔎</span>
+        <input id="q" type="search" placeholder="ابحث بالاسم أو الوصف أو الرابط… مثل: ناسا، خرائط، nasa" aria-label="بحث في المواقع" autocomplete="off">
+      </label>
+      <button class="random" id="rnd"><span class="dice">🎲</span> موقع عشوائي</button>
+    </div>
+    <nav class="chips" id="chips" aria-label="تصفية حسب الفئة"><button class="chip active" data-cat="all" aria-pressed="true">✨ الكل <span class="cnt">٥٠</span></button><button class="chip" data-cat="earth" aria-pressed="false">🌍 الأرض والخرائط الحية <span class="cnt">١٠</span></button><button class="chip" data-cat="space" aria-pressed="false">🚀 الفضاء <span class="cnt">٥</span></button><button class="chip" data-cat="data" aria-pressed="false">📊 البيانات والإحصاءات <span class="cnt">٩</span></button><button class="chip" data-cat="archive" aria-pressed="false">📚 الكتب والأرشيف <span class="cnt">٨</span></button><button class="chip" data-cat="art" aria-pressed="false">🎨 الفن والمتاحف <span class="cnt">٥</span></button><button class="chip" data-cat="music" aria-pressed="false">🎵 الموسيقى والصوت <span class="cnt">٣</span></button><button class="chip" data-cat="knowledge" aria-pressed="false">🔬 العلوم والمعرفة <span class="cnt">٥</span></button><button class="chip" data-cat="fun" aria-pressed="false">🎮 تجارب ممتعة <span class="cnt">٥</span></button></nav>
+  </div>
+</div>
+<main class="wrap">
+  <div class="status" id="status" aria-live="polite">يُعرض ٥٠ موقعًا</div>
+  <div class="grid" id="grid">
+<a class="card" href="https://zoom.earth/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="zoom earth صور أقمار صناعية حية zoom.earth" style="--i:1">
+  <span class="num">١</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=zoom.earth&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🛰️</span></span>
+  <span class="body"><span class="title">صور أقمار صناعية حية</span><span class="name">Zoom Earth</span><span class="domain" dir="ltr">zoom.earth</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.flightradar24.com/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="flightradar24 تتبع الرحلات الجوية العالمية flightradar24.com" style="--i:2">
+  <span class="num">٢</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=flightradar24.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">✈️</span></span>
+  <span class="body"><span class="title">تتبع الرحلات الجوية العالمية</span><span class="name">Flightradar24</span><span class="domain" dir="ltr">flightradar24.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.marinetraffic.com/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="marinetraffic تتبع السفن حيًا marinetraffic.com" style="--i:3">
+  <span class="num">٣</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=marinetraffic.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🚢</span></span>
+  <span class="body"><span class="title">تتبع السفن حيًا</span><span class="name">MarineTraffic</span><span class="domain" dir="ltr">marinetraffic.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.windy.com/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="windy الطقس والعواصف حية windy.com" style="--i:4">
+  <span class="num">٤</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=windy.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌪️</span></span>
+  <span class="body"><span class="title">الطقس والعواصف حية</span><span class="name">Windy</span><span class="domain" dir="ltr">windy.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.lightningmaps.org/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="lightningmaps البرق حيًا lightningmaps.org" style="--i:5">
+  <span class="num">٥</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=lightningmaps.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">⚡</span></span>
+  <span class="body"><span class="title">البرق حيًا</span><span class="name">LightningMaps</span><span class="domain" dir="ltr">lightningmaps.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="usgs earthquakes الزلازل الأخيرة earthquake.usgs.gov" style="--i:6">
+  <span class="num">٦</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=earthquake.usgs.gov&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌋</span></span>
+  <span class="body"><span class="title">الزلازل الأخيرة</span><span class="name">USGS Earthquakes</span><span class="domain" dir="ltr">earthquake.usgs.gov</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.submarinecablemap.com/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="submarine cable map كابلات الإنترنت تحت البحر submarinecablemap.com" style="--i:7">
+  <span class="num">٧</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=submarinecablemap.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌊</span></span>
+  <span class="body"><span class="title">كابلات الإنترنت تحت البحر</span><span class="name">Submarine Cable Map</span><span class="domain" dir="ltr">submarinecablemap.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.globalforestwatch.org/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="global nature watch (forest watch) مراقبة الغابات العالمية globalforestwatch.org" style="--i:8">
+  <span class="num">٨</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=globalforestwatch.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌳</span></span>
+  <span class="body"><span class="title">مراقبة الغابات العالمية</span><span class="name">Global Nature Watch (Forest Watch)</span><span class="domain" dir="ltr">globalforestwatch.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.worldometers.info/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="worldometer إحصاءات العالم حية worldometers.info" style="--i:9">
+  <span class="num">٩</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=worldometers.info&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📈</span></span>
+  <span class="body"><span class="title">إحصاءات العالم حية</span><span class="name">Worldometer</span><span class="domain" dir="ltr">worldometers.info</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.internetlivestats.com/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="internet live stats بيانات الإنترنت حية internetlivestats.com" style="--i:10">
+  <span class="num">١٠</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=internetlivestats.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌐</span></span>
+  <span class="body"><span class="title">بيانات الإنترنت حية</span><span class="name">Internet Live Stats</span><span class="domain" dir="ltr">internetlivestats.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.thetruesize.com/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="the true size مقارنة أحجام الدول الحقيقية thetruesize.com" style="--i:11">
+  <span class="num">١١</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=thetruesize.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🗺️</span></span>
+  <span class="body"><span class="title">مقارنة أحجام الدول الحقيقية</span><span class="name">The True Size</span><span class="domain" dir="ltr">thetruesize.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.oldmapsonline.org/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="old maps online استكشاف الخرائط التاريخية oldmapsonline.org" style="--i:12">
+  <span class="num">١٢</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=oldmapsonline.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📜</span></span>
+  <span class="body"><span class="title">استكشاف الخرائط التاريخية</span><span class="name">Old Maps Online</span><span class="domain" dir="ltr">oldmapsonline.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.davidrumsey.com/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="david rumsey أرشيف الخرائط التاريخية davidrumsey.com" style="--i:13">
+  <span class="num">١٣</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=davidrumsey.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🧭</span></span>
+  <span class="body"><span class="title">أرشيف الخرائط التاريخية</span><span class="name">David Rumsey</span><span class="domain" dir="ltr">davidrumsey.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer" data-cat="earth" data-search="openstreetmap خريطة العالم المبنية من المجتمع openstreetmap.org" style="--i:14">
+  <span class="num">١٤</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=openstreetmap.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📍</span></span>
+  <span class="body"><span class="title">خريطة العالم المبنية من المجتمع</span><span class="name">OpenStreetMap</span><span class="domain" dir="ltr">openstreetmap.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.window-swap.com/" target="_blank" rel="noopener noreferrer" data-cat="fun" data-search="windowswap مناظر من نوافذ حول العالم window-swap.com" style="--i:15">
+  <span class="num">١٥</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=window-swap.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🪟</span></span>
+  <span class="body"><span class="title">مناظر من نوافذ حول العالم</span><span class="name">WindowSwap</span><span class="domain" dir="ltr">window-swap.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://virtualvacation.us/" target="_blank" rel="noopener noreferrer" data-cat="fun" data-search="virtual vacation تجوّل افتراضي في المدن virtualvacation.us" style="--i:16">
+  <span class="num">١٦</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=virtualvacation.us&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🏙️</span></span>
+  <span class="body"><span class="title">تجوّل افتراضي في المدن</span><span class="name">Virtual Vacation</span><span class="domain" dir="ltr">virtualvacation.us</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.mapcrunch.com/" target="_blank" rel="noopener noreferrer" data-cat="fun" data-search="mapcrunch نظرة عشوائية على أماكن حول العالم mapcrunch.com" style="--i:17">
+  <span class="num">١٧</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=mapcrunch.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎯</span></span>
+  <span class="body"><span class="title">نظرة عشوائية على أماكن حول العالم</span><span class="name">MapCrunch</span><span class="domain" dir="ltr">mapcrunch.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.atlasobscura.com/" target="_blank" rel="noopener noreferrer" data-cat="fun" data-search="atlas obscura أماكن غريبة حول العالم atlasobscura.com" style="--i:18">
+  <span class="num">١٨</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=atlasobscura.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🗿</span></span>
+  <span class="body"><span class="title">أماكن غريبة حول العالم</span><span class="name">Atlas Obscura</span><span class="domain" dir="ltr">atlasobscura.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://neal.fun/" target="_blank" rel="noopener noreferrer" data-cat="fun" data-search="neal.fun تجارب تفاعلية ممتعة neal.fun" style="--i:19">
+  <span class="num">١٩</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=neal.fun&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎮</span></span>
+  <span class="body"><span class="title">تجارب تفاعلية ممتعة</span><span class="name">Neal.fun</span><span class="domain" dir="ltr">neal.fun</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://htwins.net/scale2/" target="_blank" rel="noopener noreferrer" data-cat="space" data-search="scale of the universe من الذرة إلى الكون htwins.net/scale2" style="--i:20">
+  <span class="num">٢٠</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=htwins.net&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🔭</span></span>
+  <span class="body"><span class="title">من الذرة إلى الكون</span><span class="name">Scale of the Universe</span><span class="domain" dir="ltr">htwins.net/scale2</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://eyes.nasa.gov/" target="_blank" rel="noopener noreferrer" data-cat="space" data-search="nasa&#x27;s eyes استكشاف الفضاء ثلاثي الأبعاد eyes.nasa.gov" style="--i:21">
+  <span class="num">٢١</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=eyes.nasa.gov&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🪐</span></span>
+  <span class="body"><span class="title">استكشاف الفضاء ثلاثي الأبعاد</span><span class="name">NASA&#x27;s Eyes</span><span class="domain" dir="ltr">eyes.nasa.gov</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://stellarium-web.org/" target="_blank" rel="noopener noreferrer" data-cat="space" data-search="stellarium web خريطة نجوم تفاعلية stellarium-web.org" style="--i:22">
+  <span class="num">٢٢</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=stellarium-web.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">✨</span></span>
+  <span class="body"><span class="title">خريطة نجوم تفاعلية</span><span class="name">Stellarium Web</span><span class="domain" dir="ltr">stellarium-web.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://apod.nasa.gov/apod/" target="_blank" rel="noopener noreferrer" data-cat="space" data-search="apod صورة الفضاء اليومية من ناسا apod.nasa.gov" style="--i:23">
+  <span class="num">٢٣</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=apod.nasa.gov&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌌</span></span>
+  <span class="body"><span class="title">صورة الفضاء اليومية من ناسا</span><span class="name">APOD</span><span class="domain" dir="ltr">apod.nasa.gov</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://images.nasa.gov/" target="_blank" rel="noopener noreferrer" data-cat="space" data-search="nasa images أرشيف صور ناسا images.nasa.gov" style="--i:24">
+  <span class="num">٢٤</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=images.nasa.gov&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🚀</span></span>
+  <span class="body"><span class="title">أرشيف صور ناسا</span><span class="name">NASA Images</span><span class="domain" dir="ltr">images.nasa.gov</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://pudding.cool/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="the pudding قصص بيانات تفاعلية pudding.cool" style="--i:25">
+  <span class="num">٢٥</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=pudding.cool&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🍮</span></span>
+  <span class="body"><span class="title">قصص بيانات تفاعلية</span><span class="name">The Pudding</span><span class="domain" dir="ltr">pudding.cool</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://ourworldindata.org/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="our world in data بيانات واتجاهات عالمية ourworldindata.org" style="--i:26">
+  <span class="num">٢٦</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=ourworldindata.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🌍</span></span>
+  <span class="body"><span class="title">بيانات واتجاهات عالمية</span><span class="name">Our World in Data</span><span class="domain" dir="ltr">ourworldindata.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.gapminder.org/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="gapminder فهم الاتجاهات العالمية gapminder.org" style="--i:27">
+  <span class="num">٢٧</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=gapminder.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🫧</span></span>
+  <span class="body"><span class="title">فهم الاتجاهات العالمية</span><span class="name">Gapminder</span><span class="domain" dir="ltr">gapminder.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://informationisbeautiful.net/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="information is beautiful تصوّر البيانات بشكل فني informationisbeautiful.net" style="--i:28">
+  <span class="num">٢٨</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=informationisbeautiful.net&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎨</span></span>
+  <span class="body"><span class="title">تصوّر البيانات بشكل فني</span><span class="name">Information is Beautiful</span><span class="domain" dir="ltr">informationisbeautiful.net</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://data.worldbank.org/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="world bank data بيانات البنك الدولي data.worldbank.org" style="--i:29">
+  <span class="num">٢٩</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=data.worldbank.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🏦</span></span>
+  <span class="body"><span class="title">بيانات البنك الدولي</span><span class="name">World Bank Data</span><span class="domain" dir="ltr">data.worldbank.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://data.tuik.gov.tr/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="tüi̇k إحصاءات تركيا الرسمية data.tuik.gov.tr" style="--i:30">
+  <span class="num">٣٠</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=data.tuik.gov.tr&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🇹🇷</span></span>
+  <span class="body"><span class="title">إحصاءات تركيا الرسمية</span><span class="name">TÜİK</span><span class="domain" dir="ltr">data.tuik.gov.tr</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://archive.org/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="internet archive أرشيف رقمي هائل archive.org" style="--i:31">
+  <span class="num">٣١</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=archive.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🏛️</span></span>
+  <span class="body"><span class="title">أرشيف رقمي هائل</span><span class="name">Internet Archive</span><span class="domain" dir="ltr">archive.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="project gutenberg كتب كلاسيكية مجانية gutenberg.org" style="--i:32">
+  <span class="num">٣٢</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=gutenberg.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📚</span></span>
+  <span class="body"><span class="title">كتب كلاسيكية مجانية</span><span class="name">Project Gutenberg</span><span class="domain" dir="ltr">gutenberg.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="open library استكشاف ملايين الكتب openlibrary.org" style="--i:33">
+  <span class="num">٣٣</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=openlibrary.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📖</span></span>
+  <span class="body"><span class="title">استكشاف ملايين الكتب</span><span class="name">Open Library</span><span class="domain" dir="ltr">openlibrary.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="library of congress أرشيف مكتبة الكونغرس الأمريكية loc.gov" style="--i:34">
+  <span class="num">٣٤</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=loc.gov&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🗂️</span></span>
+  <span class="body"><span class="title">أرشيف مكتبة الكونغرس الأمريكية</span><span class="name">Library of Congress</span><span class="domain" dir="ltr">loc.gov</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.europeana.eu/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="europeana أرشيف الثقافة الأوروبية europeana.eu" style="--i:35">
+  <span class="num">٣٥</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=europeana.eu&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🏰</span></span>
+  <span class="body"><span class="title">أرشيف الثقافة الأوروبية</span><span class="name">Europeana</span><span class="domain" dir="ltr">europeana.eu</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://dp.la/" target="_blank" rel="noopener noreferrer" data-cat="archive" data-search="dpla المكتبة الرقمية الأمريكية dp.la" style="--i:36">
+  <span class="num">٣٦</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=dp.la&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">💾</span></span>
+  <span class="body"><span class="title">المكتبة الرقمية الأمريكية</span><span class="name">DPLA</span><span class="domain" dir="ltr">dp.la</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer" data-cat="art" data-search="google arts &amp; culture متحف افتراضي artsandculture.google.com" style="--i:37">
+  <span class="num">٣٧</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=artsandculture.google.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🖼️</span></span>
+  <span class="body"><span class="title">متحف افتراضي</span><span class="name">Google Arts &amp; Culture</span><span class="domain" dir="ltr">artsandculture.google.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.rijksmuseum.nl/" target="_blank" rel="noopener noreferrer" data-cat="art" data-search="rijksmuseum أعمال فنية عالية الدقة rijksmuseum.nl" style="--i:38">
+  <span class="num">٣٨</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=rijksmuseum.nl&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎨</span></span>
+  <span class="body"><span class="title">أعمال فنية عالية الدقة</span><span class="name">Rijksmuseum</span><span class="domain" dir="ltr">rijksmuseum.nl</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.wikiart.org/" target="_blank" rel="noopener noreferrer" data-cat="art" data-search="wikiart مجموعة فنية عبر الإنترنت wikiart.org" style="--i:39">
+  <span class="num">٣٩</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=wikiart.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🖌️</span></span>
+  <span class="body"><span class="title">مجموعة فنية عبر الإنترنت</span><span class="name">WikiArt</span><span class="domain" dir="ltr">wikiart.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://publicdomainreview.org/" target="_blank" rel="noopener noreferrer" data-cat="art" data-search="public domain review كنوز تاريخية من الملكية العامة publicdomainreview.org" style="--i:40">
+  <span class="num">٤٠</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=publicdomainreview.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">💎</span></span>
+  <span class="body"><span class="title">كنوز تاريخية من الملكية العامة</span><span class="name">Public Domain Review</span><span class="domain" dir="ltr">publicdomainreview.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.openculture.com/" target="_blank" rel="noopener noreferrer" data-cat="knowledge" data-search="open culture ثقافة وتعليم مجاني openculture.com" style="--i:41">
+  <span class="num">٤١</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=openculture.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎓</span></span>
+  <span class="body"><span class="title">ثقافة وتعليم مجاني</span><span class="name">Open Culture</span><span class="domain" dir="ltr">openculture.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.metmuseum.org/" target="_blank" rel="noopener noreferrer" data-cat="art" data-search="the met مجموعات متحف المتروبوليتان metmuseum.org" style="--i:42">
+  <span class="num">٤٢</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=metmuseum.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🏺</span></span>
+  <span class="body"><span class="title">مجموعات متحف المتروبوليتان</span><span class="name">The Met</span><span class="domain" dir="ltr">metmuseum.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://musicmap.info/" target="_blank" rel="noopener noreferrer" data-cat="music" data-search="musicmap استكشاف أنماط الموسيقى musicmap.info" style="--i:43">
+  <span class="num">٤٣</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=musicmap.info&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎼</span></span>
+  <span class="body"><span class="title">استكشاف أنماط الموسيقى</span><span class="name">Musicmap</span><span class="domain" dir="ltr">musicmap.info</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://radiooooo.com/" target="_blank" rel="noopener noreferrer" data-cat="music" data-search="radiooooo موسيقى حسب الدولة والعصر radiooooo.com" style="--i:44">
+  <span class="num">٤٤</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=radiooooo.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📻</span></span>
+  <span class="body"><span class="title">موسيقى حسب الدولة والعصر</span><span class="name">Radiooooo</span><span class="domain" dir="ltr">radiooooo.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://listen.hatnote.com/" target="_blank" rel="noopener noreferrer" data-cat="music" data-search="listen to wikipedia تحويل تحرير ويكيبيديا إلى صوت listen.hatnote.com" style="--i:45">
+  <span class="num">٤٥</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=listen.hatnote.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎧</span></span>
+  <span class="body"><span class="title">تحويل تحرير ويكيبيديا إلى صوت</span><span class="name">Listen to Wikipedia</span><span class="domain" dir="ltr">listen.hatnote.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://ar.wikipedia.org/wiki/Special:Random" target="_blank" rel="noopener noreferrer" data-cat="knowledge" data-search="ويكيبيديا عشوائية معرفة عشوائية بضغطة ar.wikipedia.org" style="--i:46">
+  <span class="num">٤٦</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=ar.wikipedia.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🎲</span></span>
+  <span class="body"><span class="title">معرفة عشوائية بضغطة</span><span class="name">ويكيبيديا عشوائية</span><span class="domain" dir="ltr">ar.wikipedia.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.timeanddate.com/" target="_blank" rel="noopener noreferrer" data-cat="knowledge" data-search="time and date أدوات الوقت والفلك timeanddate.com" style="--i:47">
+  <span class="num">٤٧</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=timeanddate.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">⏰</span></span>
+  <span class="body"><span class="title">أدوات الوقت والفلك</span><span class="name">Time and Date</span><span class="domain" dir="ltr">timeanddate.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://www.sciencedaily.com/" target="_blank" rel="noopener noreferrer" data-cat="knowledge" data-search="sciencedaily أخبار علمية حديثة sciencedaily.com" style="--i:48">
+  <span class="num">٤٨</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=sciencedaily.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">🔬</span></span>
+  <span class="body"><span class="title">أخبار علمية حديثة</span><span class="name">ScienceDaily</span><span class="domain" dir="ltr">sciencedaily.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://arxiv.org/" target="_blank" rel="noopener noreferrer" data-cat="knowledge" data-search="arxiv أوراق بحثية مجانية arxiv.org" style="--i:49">
+  <span class="num">٤٩</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=arxiv.org&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📄</span></span>
+  <span class="body"><span class="title">أوراق بحثية مجانية</span><span class="name">arXiv</span><span class="domain" dir="ltr">arxiv.org</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+<a class="card" href="https://observablehq.com/" target="_blank" rel="noopener noreferrer" data-cat="data" data-search="observable تصوّر بيانات تفاعلي observablehq.com" style="--i:50">
+  <span class="num">٥٠</span>
+  <span class="icon"><img src="https://www.google.com/s2/favicons?domain=observablehq.com&amp;sz=64" alt="" loading="lazy" width="32" height="32" onerror="this.remove()"><span class="emo" aria-hidden="true">📊</span></span>
+  <span class="body"><span class="title">تصوّر بيانات تفاعلي</span><span class="name">Observable</span><span class="domain" dir="ltr">observablehq.com</span></span>
+  <span class="go" aria-hidden="true">↖</span>
+</a>
+  </div>
+  <div class="empty" id="empty">😕 ما لقينا نتيجة… جرّب كلمة ثانية</div>
+</main>
+<footer class="wrap">صُنع بحب 💚 · جميع الروابط تفتح في تبويب جديد</footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  const LABELS={"all": "✨ الكل", "earth": "🌍 الأرض والخرائط الحية", "space": "🚀 الفضاء", "data": "📊 البيانات والإحصاءات", "archive": "📚 الكتب والأرشيف", "art": "🎨 الفن والمتاحف", "music": "🎵 الموسيقى والصوت", "knowledge": "🔬 العلوم والمعرفة", "fun": "🎮 تجارب ممتعة"};
+  const cards=[...document.querySelectorAll('.card')];
+  const q=document.getElementById('q'),chips=[...document.querySelectorAll('.chip')];
+  const status=document.getElementById('status'),empty=document.getElementById('empty');
+  const toAr=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+  const norm=s=>s.toLowerCase().replace(/[\u064B-\u0652\u0640]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');
+  cards.forEach(c=>c.dataset.norm=norm(c.dataset.search));
+  let cat='all';
+  function apply(){
+    const t=norm(q.value.trim());let n=0;
+    cards.forEach(c=>{const ok=(cat==='all'||c.dataset.cat===cat)&&(!t||c.dataset.norm.includes(t));c.classList.toggle('hidden',!ok);if(ok)n++;});
+    status.textContent='يُعرض '+toAr(n)+' '+(n>10||n===0?'موقعًا':(n===1?'موقع':'مواقع'))+(cat!=='all'?' في «'+LABELS[cat]+'»':'');
+    empty.style.display=n?'none':'block';
+  }
+  chips.forEach(ch=>ch.addEventListener('click',()=>{cat=ch.dataset.cat;chips.forEach(x=>{x.classList.toggle('active',x===ch);x.setAttribute('aria-pressed',x===ch);});apply();}));
+  q.addEventListener('input',apply);
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus();}});
+  const toast=document.getElementById('toast');let tt;
+  function say(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),2600);}
+  const rnd=document.getElementById('rnd');
+  rnd.addEventListener('click',()=>{
+    const pool=cards.filter(c=>!c.classList.contains('hidden'));const list=pool.length?pool:cards;
+    const c=list[Math.floor(Math.random()*list.length)];
+    rnd.classList.remove('roll');void rnd.offsetWidth;rnd.classList.add('roll');
+    c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash');
+    c.scrollIntoView({behavior:'smooth',block:'center'});
+    say('🎲 وقع الاختيار على: '+c.querySelector('.name').textContent);
+    const w=window.open(c.href,'_blank','noopener');
+    if(!w) say('🎲 '+c.querySelector('.name').textContent+' — اضغط على البطاقة المضيئة لفتحه');
+  });
+  cards.forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');}));
+  const themeBtn=document.getElementById('theme');
+  function setTheme(t){document.documentElement.dataset.theme=t;themeBtn.textContent=t==='light'?'☀️':'🌙';try{localStorage.setItem('hub-theme',t)}catch(e){}}
+  let saved='dark';try{saved=localStorage.getItem('hub-theme')||'dark'}catch(e){}
+  setTheme(saved);
+  themeBtn.addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='light'?'dark':'light'));
+})();
+</script>
+</body>
+</html>
